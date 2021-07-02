@@ -37,6 +37,11 @@ const Home = () => {
       return;
     }
 
+    if(roomRef.val().endedAt) {
+      alert('Room already ended')
+      return;
+    }
+
     history.push(`/rooms/${roomCode}`)
 
   }
